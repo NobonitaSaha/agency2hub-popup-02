@@ -52,16 +52,28 @@
 					<h3>+ 300 FREE SPINS</h3>
 				</div>
 
+				<div class="cookie-rate">
+					<div class="cookie-ratings">
+						<ul>
+							<li><i class="fa-solid fa-star"></i></li>
+							<li><i class="fa-solid fa-star"></i></li>
+							<li><i class="fa-solid fa-star"></i></li>
+							<li><i class="fa-solid fa-star"></i></li>
+							<li><i class="fa-solid fa-star"></i></li>
+						</ul>
+					</div>
+
+					<div class="cookie-score">
+						<h4>9.9 <small>/10</small></h4>
+					</div>
+				</div>
+
 				<div class="cookie-btn">
 					<div class="cookie-double-btn">
 						<a href="https://www.lukki.com/?stag=146098_662c97bf8261d9fc860c1048" target="_blank">
 							<button onclick="acceptCookies()" class="cookie-accept">Claim deal</button>
 						</a>
 					</div>
-				</div>
-
-				<div class="cookie-score-rate">
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque atque, eaque impedit autem tempore praesentium.</p>
 				</div>
 			</div>
 
@@ -205,6 +217,36 @@
 			margin-bottom: -10px;
 		}
 
+		.cookie-rate{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 12px;
+			margin: 15px 0px;
+		}
+
+		.cookie-ratings > ul{
+			list-style: none;
+		}
+
+		.cookie-ratings > ul > li{
+			display: inline-flex;
+			font-size: 15px;
+			color: #f5c22a;
+		}
+
+		.cookie-score > h4{
+			font-family: Teko, sans-serif;
+			font-size: 26px;
+			font-weight: 600;
+			color: #0c0c0c;
+		}
+
+		.cookie-score > h4 > small{
+			font-size: 16px;
+			color: #000000d7;
+		}
+
 		.cookie-double-btn button {
 			background: #009f40;
 			border: 0;
@@ -222,22 +264,12 @@
 			box-shadow: 0 3px 12px rgba(0, 0, 0, .25);
 			transition: all .15s ease-in-out;
 			border-radius: 100px;
-			margin: 30px 0px 20px 0px;  
+			margin: 0px 0px 10px 0px;
 		}
 
 		.cookie-double-btn button:hover {
 			opacity: .9;
 		}
-
-        .cookie-score-rate > p{
-            font-family: "Montserrat", sans-serif;
-            font-size: 13px;
-            line-height: 20px;
-            color: #000000;
-            padding: 10px 25px;
-            font-weight: 500;
-            margin-bottom: 5px;
-        }
 
 		.cookie-overlay {
 			position: fixed;
@@ -271,16 +303,16 @@
 
 		.close-icon {
 			position: fixed;
-			top: -35px;
-			right: -32px;
+			top: -45px;
+			right: -15px;
 			cursor: pointer;
-			font-size: 24px;
+			font-size: 22px;
 			color: #000000;
 			z-index: 999999;
 			background: #ffffffef;
 			border-radius: 50%;
-			width: 34px;
-			height: 34px;
+			width: 30px;
+			height: 30px;
 		}
 
         .close-icon:hover {
