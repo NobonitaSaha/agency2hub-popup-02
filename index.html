@@ -33,7 +33,14 @@
 		<div class="cookie-overlay-2 show-overlay-2"></div>
 		<div class="cookie-popup" id="cookiePopup">
             <!-- Close icon outside the popup -->
-            <div class="close-icon" onclick="closePopup()"><img src="img/newzland-images/close.png" alt=""></div>
+           <div class="cookie-top">
+				<div class="close-icon" onclick="closePopup()"><img src="img/newzland-images/close.png" alt=""></div>
+				
+				<div class="cookie-h1">
+					<h1>New Customer Offers</h1>
+				</div>
+		   </div>
+
 			<div class="cookie-home">
 				<div class="cookie-logo">
 					<a href="https://www.lukki.com/?stag=146098_662c980887609bad92bb8fd3" target="_blank">
@@ -42,8 +49,8 @@
 				</div>
 			</div>
 			
-			<div class="cookie-h1">
-				<h1>New Customer Offers</h1>
+			<div class="ribbon">
+				<span class="text"><strong class="bold">Our</strong> Top Pick</span>
 			</div>
 
 			<div class="cookie-description">
@@ -88,6 +95,62 @@
 		/* ---------------------------------- 
 			Cookie Popup CSS Start 
 		------------------------------------- */
+		.ribbon {
+			position: relative;
+			display: inline-block;
+			text-align: center;
+			top: -155px;
+			left: -154px;
+			z-index: 111111111111;
+		}
+
+		.text {
+			display: inline-block;
+			padding: 0.5em 1em;
+			min-width: 132px;
+			line-height: 1.2em;
+			background: #ff3333;
+			position: relative;
+			font-family: "Montserrat", sans-serif;
+			font-size: 13px;
+			text-transform: uppercase;
+			color: #ffffff;
+			font-weight: 600;
+			text-align: -webkit-center;
+			word-spacing: 0.4px;
+		}
+
+		.bold {
+			font-family: "Montserrat", sans-serif;
+			color: #ffffff;
+			font-weight: 600;
+		}
+
+		.text:after{
+			content:'';
+			position:absolute;
+			border-style:solid;
+		}
+
+		.text:before {
+			content: ' ';
+			position: absolute;
+			height: 0;
+			width: 0;
+			bottom: -10px;
+			left: 0;
+			border-top: 10px solid #ab2121;
+			border-left: 10px solid transparent;
+		}
+
+		.text:after {
+			top: 3px;
+			right: -26px;
+			border-width: 16px 14px 8px 14px;
+			border-color: rgb(255 51 51) transparent transparent transparent;
+			transform: rotate(-90deg);
+		}
+
 		.cookie-gem-images {
 			position: absolute;
 		}
@@ -98,7 +161,7 @@
 			transform: rotate(338.416deg);
 			top: -410px;
 			left: -85px;
-			z-index: -111;
+			z-index: -999999;
 		}
 
 		img.double-gem {
@@ -106,14 +169,13 @@
 			width: 320px;
 			transform: rotate(90deg);
 			top: -234px;
-			left: 322px;
-			z-index: -1;
+			left: 324px;
+			z-index: -999999;
 		}
 
 		.cookie-h1 {
 			position: absolute;
 			top: -45px;
-			margin: 0 auto;
 			text-align: center;
 			width: 100%;
 		}
@@ -125,15 +187,17 @@
 			text-transform: uppercase;
 			font-family: "Montserrat", sans-serif;
 			word-spacing: 0.6px;
+			text-align: center;
 		}
 
 		.cookie-description {
 			background-color: #fff;
 			padding: 35px 0px 0px 0px;
 			position: relative;
-			top: -30px;
+			top: -60px;
 			left: 0;
 			right: 0;
+			margin-bottom: -15px;
 		}
 
 		.cookie-popup {
@@ -154,9 +218,8 @@
 			max-width: 420px;
 			margin: 0 auto;
 			text-align: center;
-			height: auto;
 		}
-        
+				
         .cookie-home {
 			position: relative;
 			width: 100%;
@@ -188,7 +251,7 @@
 		}
 
 		.cookie-logo {
-			margin: 40px auto 50px auto;
+			margin: 50px auto 50px auto;
 		}
 
 		.cookie-logo img {
@@ -264,7 +327,6 @@
 			box-shadow: 0 3px 12px rgba(0, 0, 0, .25);
 			transition: all .15s ease-in-out;
 			border-radius: 100px;
-			margin: 0px 0px 10px 0px;
 		}
 
 		.cookie-double-btn button:hover {
@@ -303,8 +365,8 @@
 
 		.close-icon {
 			position: fixed;
-			top: -46px;
-			right: -8px;
+			top: -45px;
+			right: -30px;
 			cursor: pointer;
 			z-index: 999999;
 		}
@@ -322,6 +384,7 @@
 			.cookie-popup.show {
 				margin: 0 auto;
 				max-width: 290px;
+				min-height: 220px;
 			}
 
 			.cookie-overlay{
@@ -331,7 +394,7 @@
             .cookie-logo {
 				width: 100%;
 				margin: 20px auto;
-				padding: 20px 0px 25px 0px;
+				padding: 30px 0px 25px 0px;
 			}
 
 			.cookie-logo img {
@@ -363,8 +426,8 @@
 			}
 
 			.close-icon {
-				top: -41px;
-				right: -12px;
+				top: -40px;
+				right: -28px;
 			}
 
 			.close-icon > img {
@@ -372,8 +435,30 @@
 				height: 28px;
 			}
 
-			.cookie-description{
+			.cookie-description {
 				left: 0px;
+				margin-bottom: -30px;
+			}
+
+			
+			.ribbon {
+				top: -130px;
+				left: -90px;
+			}
+			
+			.text {
+				padding: 0.4em 1em;
+				min-width: 130px;
+			}
+
+			.text:after {
+				top: -4px;
+				right: -29px;
+				border-width: 13px 13px 21px 13px;
+			}
+
+			.cookie-text > h2 {
+				font-size: 48px;
 			}
 		}
 
@@ -388,7 +473,7 @@
 			}
 
 			.cookie-logo {
-				margin: 25px auto 40px auto;
+				margin: 45px auto 40px auto;
 				padding: 10px 0;
 			}
 
@@ -401,6 +486,15 @@
 
 			.cookie-description{
 				left: 0px;
+			}
+
+			.ribbon {
+				top: -160px;
+			}
+
+			.close-icon {
+				top: -45px;
+				right: -35px;
 			}
 		}
 
