@@ -33,7 +33,7 @@
 		<div class="cookie-overlay-2 show-overlay-2"></div>
 		<div class="cookie-popup" id="cookiePopup">
             <!-- Close icon outside the popup -->
-            <div class="close-icon" onclick="closePopup()">&times;</div>
+            <div class="close-icon" onclick="closePopup()"><img src="img/newzland-images/close.png" alt=""></div>
 			<div class="cookie-home">
 				<div class="cookie-logo">
 					<a href="https://www.lukki.com/?stag=146098_662c980887609bad92bb8fd3" target="_blank">
@@ -303,14 +303,13 @@
 
 		.close-icon {
 			position: fixed;
-			top: -45px;
-			right: -15px;
+			top: -46px;
+			right: -8px;
 			cursor: pointer;
-			font-size: 22px;
-			color: #000000;
 			z-index: 999999;
-			background: #ffffffef;
-			border-radius: 50%;
+		}
+
+		.close-icon > img{
 			width: 30px;
 			height: 30px;
 		}
@@ -364,8 +363,13 @@
 			}
 
 			.close-icon {
-				top: -74px;
-				right: -10px;
+				top: -41px;
+				right: -12px;
+			}
+
+			.close-icon > img {
+				width: 28px;
+				height: 28px;
 			}
 
 			.cookie-description{
