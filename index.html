@@ -465,7 +465,32 @@
 			.cookie-text > h3 {
 				font-size: 22px;
 			}
+
+			
 		}
+
+		
+
+		@media only screen and (max-width: 600px) and (min-width: 320px)  { /* Apply styles only on screens with a maximum width of 767px (typically mobile screens) */
+			.cookie-popup {
+				position: fixed;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				overflow-y: auto; /* Allow vertical scrolling if content exceeds viewport height */
+				overflow-x: visible;
+				max-height: calc(100vh - 100px); /* Set maximum height to fit viewport */
+				width: 90%;
+				max-width: 360px;
+				z-index: 1000000000000;
+			}
+			.cookie-gem-images img {
+				display: block; /* Ensure images are displayed as blocks */
+				max-width: 100%; /* Ensure images don't exceed container width */
+			}
+
+		}
+
 
 
 		@media only screen and (max-width: 850px) and (min-width: 768px) {
@@ -548,6 +573,39 @@
 
 
 		<!-- ----------------- Cookie JS Start ----------------- -->
+		<script>
+			function toggleElementsVisibility() {
+    console.log("Scrolling!"); // Add this line to check if the function is triggered
+    var closeIcon = document.querySelector(".close-icon");
+    var gemImages = document.querySelector(".cookie-gem-images");
+    var popup = document.getElementById("cookiePopup");
+    var scrollPosition = window.pageYOffset;
+    var popupTop = popup.getBoundingClientRect().top;
+
+    // Rest of the function code...
+}
+
+		</script>
+		<script>
+			document.addEventListener("scroll", function () {
+    var popup = document.getElementById("cookiePopup");
+    var scrollPosition = window.pageYOffset;
+    var viewportHeight = window.innerHeight;
+    var popupHeight = popup.offsetHeight;
+    var topOffset = (viewportHeight - popupHeight) / 2 + scrollPosition;
+
+    // Check if the content height exceeds the viewport height
+    if (popupHeight > viewportHeight) {
+        // If content exceeds viewport height, set the popup's top position based on scroll position
+        popup.style.top = topOffset + "px";
+    } else {
+        // If content does not exceed viewport height, keep the popup centered vertically
+        popup.style.top = "50%";
+    }
+});
+
+
+		</script>
 		<script>
 			// Function to close the popup
 			function closePopup() {
